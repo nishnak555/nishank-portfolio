@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@import "./styles/theme.css";
+@import "./styles/typography.css";
+@import "./styles/animations.css";
+@import "./styles/utilities.css";
+@import "./styles/hero-projects-v2.css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: rgba(79, 107, 255, 0.2);
+  color: var(--text-primary);
+}
+
+button { font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
