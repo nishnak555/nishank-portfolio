@@ -9,7 +9,6 @@ import { ServicesSection } from "@/sections/ServicesSection";
 import { ExperienceSection } from "@/sections/ExperienceSection";
 import { ProjectsSection } from "@/sections/ProjectsSection";
 import { ProcessSection } from "@/sections/ProcessSection";
-import { TestimonialsSection } from "@/sections/TestimonialsSection";
 import { ContactSection } from "@/sections/ContactSection";
 import { FooterSection } from "@/sections/FooterSection";
 
@@ -27,7 +26,6 @@ export default function App() {
         <SkillsSection />
         <ServicesSection />
         <ExperienceSection />
-        <TestimonialsSection />
         <ContactSection />
       </main>
       <FooterSection />

@@ -15,7 +15,7 @@ export function FooterSection() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a href="#home" className="brand-mark">NG.</a>
+            <a href="#home" className="brand-mark">NP.</a>
             <p className="footer-brand__tagline">
               Building scalable digital products for global clients. Available for freelance projects.
             </p>
@@ -58,7 +58,7 @@ export function FooterSection() {
 
         <div className="footer-bottom">
           <span className="footer-copyright">
-            © {new Date().getFullYear()} Nikhil Gautam. All rights reserved.
+            © {new Date().getFullYear()} Nishank Pathak. All rights reserved.
           </span>
           <nav className="footer-legal" aria-label="Legal">
             <a href="#" className="footer-legal-link">Privacy Policy</a>

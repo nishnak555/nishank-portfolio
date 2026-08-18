@@ -59,7 +59,7 @@ export function Navbar() {
 
           {/* Brand */}
           <a href="#home" className="navbar-brand" aria-label="Home">
-            NG.
+            NP.
           </a>
 
           {/* Center nav (desktop) */}
@@ -128,7 +128,7 @@ export function Navbar() {
               transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="mobile-drawer-head">
-                <span className="navbar-brand">NG.</span>
+                <span className="navbar-brand">NP.</span>
                 <button
                   type="button"
                   className="navbar-icon-btn"

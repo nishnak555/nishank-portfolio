@@ -70,11 +70,7 @@ export function ContactSection() {
                   <p className="cta-banner__sub">Have a project in mind? Let's discuss how I can help turn your idea into a successful product.</p>
                 </div>
                 <div className="cta-banner__actions">
-                  <MagneticButton href="https://calendly.com/nikhilkgautam" className="btn-primary">
-                    <Calendar size={15} />
-                    Book a Call
-                  </MagneticButton>
-                  <MagneticButton href="mailto:hello@nikhilgautam.dev" className="btn-secondary">
+                  <MagneticButton href="mailto:pathaknishank007@gmail.com" className="btn-primary">
                     <Mail size={15} />
                     Send Email
                   </MagneticButton>

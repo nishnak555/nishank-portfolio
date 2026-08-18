@@ -3,36 +3,31 @@ import type { BrandItem, HeroStat } from "@/types";
 export const heroHeadline = "I build scalable digital products for global clients.";
 
 export const heroSubtitle =
-  "Senior Full Stack Engineer with 4+ years of experience building high-performance web applications, APIs, and mobile apps that scale.";
+  "Full Stack Developer with 3+ years of experience building high-performance web applications, mobile apps, and AI-powered systems.";
 
 export const trustedBrands: BrandItem[] = [
-  { name: "AxelATS" },
-  { name: "GrowBolt" },
-  { name: "Ogera" },
-  { name: "Chaplin" },
-  { name: "Sawayas" },
-  { name: "HomeServe" },
+  { name: "Appomate" },
+  { name: "Sourcery IT" },
 ];
 
 export const dashboardStats: HeroStat[] = [
-  { value: "24", label: "Total Projects", delta: "+12%" },
-  { value: "100K+", label: "Total Users", delta: "+18%" },
-  { value: "99.9%", label: "System Uptime", delta: "+0.2%" },
-  { value: "320ms", label: "Avg. Response", delta: "+15%" },
+  { value: "6+", label: "Projects Delivered" },
+  { value: "3+", label: "Years Experience" },
+  { value: "2", label: "Apps Published" },
+  { value: "AI", label: "Tutor Systems" },
 ];
 
 export const recentDeployments = [
-  { name: "API Gateway", time: "2m ago", status: "success" },
-  { name: "Web Dashboard", time: "18m ago", status: "success" },
-  { name: "Mobile App", time: "1h ago", status: "success" },
-  { name: "Analytics Service", time: "2h ago", status: "success" },
+  { name: "AI Tutor Platform", time: "recent", status: "success" },
+  { name: "Job Matching Platform", time: "recent", status: "success" },
+  { name: "Document Management System", time: "recent", status: "success" },
 ];
 
 export const heroTechStack = [
   { label: "React", color: "#61dafb" },
+  { label: "Flutter", color: "#02569B" },
   { label: "Next.js", color: "#ffffff" },
-  { label: "TS", color: "#3178c6" },
   { label: "Node", color: "#68a063" },
   { label: "Python", color: "#f7c035" },
-  { label: "AWS", color: "#ff9900" },
+  { label: "FastAPI", color: "#009688" },
 ];

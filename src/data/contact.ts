@@ -2,18 +2,18 @@ import type { ContactMethod } from "@/types";
 
 export const contactMethods: ContactMethod[] = [
   {
-    icon: "calendar",
-    label: "Book a Call",
-    value: "Schedule a free 30-min consultation",
-    href: "https://calendly.com/nikhilkgautam",
-    description: "Let's discuss your project over a quick call.",
-  },
-  {
     icon: "mail",
     label: "Send Email",
-    value: "hello@nikhilgautam.dev",
-    href: "mailto:hello@nikhilgautam.dev",
+    value: "pathaknishank007@gmail.com",
+    href: "mailto:pathaknishank007@gmail.com",
     description: "I typically respond within 24 hours.",
+  },
+  {
+    icon: "linkedin",
+    label: "LinkedIn",
+    value: "Connect with me",
+    href: "https://www.linkedin.com/in/nishank-pathak-81b5771a7/",
+    description: "Let's connect professionally.",
   },
   {
     icon: "download",

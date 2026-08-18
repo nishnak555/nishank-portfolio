@@ -7,5 +7,4 @@ export * from "./services";
 export * from "./experience";
 export * from "./projects";
 export * from "./process";
-export * from "./testimonials";
 export * from "./contact";
