@@ -1,33 +1,31 @@
-import type { NavItem, SocialLink, FooterLink } from "@/types";
+import type { NavItem, FooterLink } from "@/types";
+import { site } from "./site";
 
 export const navigation: NavItem[] = [
-  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
   { label: "Work", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Process", href: "#process" },
+  { label: "Team", href: "#team" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
-export const socialLinks: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com/nishnak555", icon: "github" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/nishank-pathak-81b5771a7/", icon: "linkedin" },
-];
-
 export const footerLinks: Record<string, FooterLink[]> = {
-  Work: [
-    { label: "Projects", href: "#projects" },
+  Studio: [
     { label: "Services", href: "#services" },
-    { label: "Experience", href: "#experience" },
+    { label: "Work", href: "#projects" },
     { label: "Process", href: "#process" },
+    { label: "Team", href: "#team" },
   ],
-  About: [
-    { label: "About Me", href: "#about" },
-    { label: "Skills", href: "#skills" },
+  Services: [
+    { label: "Web Development", href: "#services" },
+    { label: "AI Implementation", href: "#services" },
+    { label: "Agentic AI", href: "#services" },
+    { label: "Figma Design", href: "#services" },
   ],
   Contact: [
-    { label: "Get in Touch", href: "#contact" },
-    { label: "Send Email", href: "mailto:pathaknishank007@gmail.com" },
-    { label: "Download CV", href: "/resume.pdf" },
+    { label: "Get in touch", href: "#contact" },
+    { label: site.email, href: `mailto:${site.email}` },
+    { label: "FAQ", href: "#faq" },
   ],
 };

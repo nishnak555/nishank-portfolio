@@ -5,6 +5,7 @@
 @import "./styles/animations.css";
 @import "./styles/utilities.css";
 @import "./styles/hero-projects-v2.css";
+@import "./styles/studio.css";
 
 *, *::before, *::after {
   box-sizing: border-box;

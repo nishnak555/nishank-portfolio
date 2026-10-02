@@ -2,11 +2,12 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { Navbar } from "@/components/layout/Navbar";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { HeroSection } from "@/sections/HeroSection";
-import { AboutSection } from "@/sections/AboutSection";
 import { StatsSection } from "@/sections/StatsSection";
-import { SkillsSection } from "@/sections/SkillsSection";
+import { TechSection } from "@/sections/TechSection";
+import { TeamSection } from "@/sections/TeamSection";
+import { FaqSection } from "@/sections/FaqSection";
+import { Seo } from "@/components/Seo";
 import { ServicesSection } from "@/sections/ServicesSection";
-import { ExperienceSection } from "@/sections/ExperienceSection";
 import { ProjectsSection } from "@/sections/ProjectsSection";
 import { ProcessSection } from "@/sections/ProcessSection";
 import { ContactSection } from "@/sections/ContactSection";
@@ -17,15 +18,16 @@ export default function App() {
     <ThemeProvider>
       <ScrollProgress />
       <Navbar />
+      <Seo />
       <main>
         <HeroSection />
         <StatsSection />
+        <ServicesSection />
         <ProjectsSection />
         <ProcessSection />
-        <AboutSection />
-        <SkillsSection />
-        <ServicesSection />
-        <ExperienceSection />
+        <TechSection />
+        <TeamSection />
+        <FaqSection />
         <ContactSection />
       </main>
       <FooterSection />

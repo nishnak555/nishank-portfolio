@@ -179,7 +179,7 @@ export function ProjectsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Featured Work
+            Selected Work
           </motion.span>
 
           <div className="proj-header-row">

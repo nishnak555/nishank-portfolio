@@ -46,7 +46,7 @@ export function ProcessSection() {
     <section id="process" className="section" style={{ background: "var(--gradient-process)" }}>
       <div className="container">
         <SectionHeader
-          eyebrow="My Process"
+          eyebrow="How We Work"
           title="From idea to "
           highlight="impact"
           subtitle="A structured approach to delivering exceptional results, every time."

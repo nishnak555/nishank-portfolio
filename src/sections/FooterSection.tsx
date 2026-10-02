@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
-import { footerLinks, socialLinks } from "@/data";
-
-const socialIconMap: Record<string, React.ElementType> = {
-  github: Github,
-  linkedin: Linkedin,
-  twitter: Twitter,
-  instagram: Instagram,
-};
+import { Mail } from "lucide-react";
+import { footerLinks, site } from "@/data";
 
 export function FooterSection() {
   return (
@@ -15,28 +8,20 @@ export function FooterSection() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a href="#home" className="brand-mark">NP.</a>
+            <a href="#home" className="brand-mark">MindForge<span className="text-gradient">Ai</span></a>
             <p className="footer-brand__tagline">
-              Building scalable digital products for global clients. Available for freelance projects.
+              Web development, Figma design, deployment and AI agents — delivered remotely by senior engineers.
             </p>
             <div className="footer-social">
-              {socialLinks.map((link) => {
-                const Icon = socialIconMap[link.icon] ?? Github;
-                return (
-                  <motion.a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={link.label}
-                    className="social-link"
-                    whileHover={{ scale: 1.15, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Icon size={16} />
-                  </motion.a>
-                );
-              })}
+              <motion.a
+                href={`mailto:${site.email}`}
+                aria-label="Email us"
+                className="social-link"
+                whileHover={{ scale: 1.15, y: -2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Mail size={16} />
+              </motion.a>
             </div>
           </div>
 
@@ -58,12 +43,8 @@ export function FooterSection() {
 
         <div className="footer-bottom">
           <span className="footer-copyright">
-            © {new Date().getFullYear()} Nishank Pathak. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
           </span>
-          <nav className="footer-legal" aria-label="Legal">
-            <a href="#" className="footer-legal-link">Privacy Policy</a>
-            <a href="#" className="footer-legal-link">Terms of Service</a>
-          </nav>
         </div>
       </div>
     </footer>

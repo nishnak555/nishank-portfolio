@@ -3,26 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Moon, Sun, Monitor, Menu } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { navigation, site } from "@/data";
 
-const NAV_LINKS = [
-  { label: "Work",    href: "#projects"     },
-  { label: "About",   href: "#about"        },
-  { label: "Skills",  href: "#skills"       },
-  { label: "Process", href: "#process"      },
-  { label: "Contact", href: "#contact"      },
-];
+const NAV_LINKS = navigation;
 
-const MOBILE_LINKS = [
-  { label: "Home",         href: "#home"          },
-  { label: "Work",         href: "#projects"      },
-  { label: "About",        href: "#about"         },
-  { label: "Skills",       href: "#skills"        },
-  { label: "Services",     href: "#services"      },
-  { label: "Experience",   href: "#experience"    },
-  { label: "Process",      href: "#process"       },
-  { label: "Testimonials", href: "#testimonials"  },
-  { label: "Contact",      href: "#contact"       },
-];
+const MOBILE_LINKS = [{ label: "Home", href: "#home" }, ...navigation];
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -58,8 +43,8 @@ export function Navbar() {
         <div className="navbar-float-inner">
 
           {/* Brand */}
-          <a href="#home" className="navbar-brand" aria-label="Home">
-            NP.
+          <a href="#home" className="navbar-brand" aria-label={`${site.name} home`}>
+            MindForge<span className="text-gradient">Ai</span>
           </a>
 
           {/* Center nav (desktop) */}
@@ -128,7 +113,7 @@ export function Navbar() {
               transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="mobile-drawer-head">
-                <span className="navbar-brand">NP.</span>
+                <span className="navbar-brand">MindForge<span className="text-gradient">Ai</span></span>
                 <button
                   type="button"
                   className="navbar-icon-btn"

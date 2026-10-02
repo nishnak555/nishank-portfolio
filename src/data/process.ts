@@ -5,7 +5,7 @@ export const processSteps: ProcessStep[] = [
     id: 1,
     phase: "01",
     title: "Discover",
-    description: "Understanding your idea, goals, and target audience through deep-dive conversations and research.",
+    description: "We learn your goals, users and constraints, then agree on scope, timeline and success metrics.",
     icon: "compass",
     color: "#4f6bff",
   },

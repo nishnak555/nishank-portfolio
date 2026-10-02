@@ -84,17 +84,6 @@ export interface ProcessStep {
   color: string;
 }
 
-export interface TestimonialItem {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-  rating: number;
-  avatar?: string;
-  initials: string;
-  color: string;
-}
-
 export interface ContactMethod {
   icon: string;
   label: string;
@@ -103,19 +92,7 @@ export interface ContactMethod {
   description: string;
 }
 
-export interface SocialLink {
-  label: string;
-  href: string;
-  icon: string;
-}
-
 export interface FooterLink {
   label: string;
   href: string;
-}
-
-export interface AboutStat {
-  value: string;
-  label: string;
-  icon: string;
 }

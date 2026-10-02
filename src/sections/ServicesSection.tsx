@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { Monitor, Smartphone, Zap, Layers, Cloud, MessageSquare, ArrowRight } from "lucide-react";
+import { Monitor, Cloud, PenTool, Brain, Workflow, Bot, ArrowRight } from "lucide-react";
 import { services } from "@/data";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
 
 const iconMap: Record<string, React.ElementType> = {
   monitor: Monitor,
-  smartphone: Smartphone,
-  zap: Zap,
-  layers: Layers,
   cloud: Cloud,
-  "message-square": MessageSquare,
+  "pen-tool": PenTool,
+  brain: Brain,
+  workflow: Workflow,
+  bot: Bot,
 };
 
 export function ServicesSection() {
@@ -18,10 +18,10 @@ export function ServicesSection() {
     <section id="services" className="section">
       <div className="container">
         <SectionHeader
-          eyebrow="What I Do"
-          title="Services I "
+          eyebrow="What We Do"
+          title="Services we "
           highlight="offer"
-          subtitle="From concept to deployment — I provide end-to-end development services tailored to your needs."
+          subtitle="From concept to deployment — we deliver design, engineering and AI under one roof."
           align="center"
         />
 

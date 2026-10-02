@@ -1,16 +1,14 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Calendar, Mail, Download, Send, CheckCircle } from "lucide-react";
-import { contactMethods, contactFormFields } from "@/data";
+import { Mail, Send, CheckCircle } from "lucide-react";
+import { contactMethods, contactFormFields, site } from "@/data";
 import { Reveal } from "@/components/animations/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
 
 const iconMap: Record<string, React.ElementType> = {
-  calendar: Calendar,
   mail: Mail,
-  download: Download,
 };
 
 export function ContactSection() {
@@ -20,6 +18,9 @@ export function ContactSection() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`Project enquiry: ${form.service || "General"}`);
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
   };
@@ -30,10 +31,10 @@ export function ContactSection() {
         <div className="contact-grid">
           <div className="contact-copy">
             <SectionHeader
-              eyebrow="Let's Work Together"
+              eyebrow="Contact"
               title="Let's build something "
               highlight="amazing"
-              subtitle="Have a project in mind? I'd love to hear about it. Let's discuss how I can help turn your idea into reality."
+              subtitle="Tell us what you want to build. We'll reply within 24 hours with next steps."
             />
 
             <StaggerContainer className="contact-methods mt-10" stagger={0.08}>
@@ -67,16 +68,12 @@ export function ContactSection() {
               <div className="cta-banner">
                 <div>
                   <p className="cta-banner__title">Let's build something <span className="text-gradient">amazing</span> together</p>
-                  <p className="cta-banner__sub">Have a project in mind? Let's discuss how I can help turn your idea into a successful product.</p>
+                  <p className="cta-banner__sub">Have a project in mind? Share your idea and we'll scope it together.</p>
                 </div>
                 <div className="cta-banner__actions">
-                  <MagneticButton href="mailto:pathaknishank007@gmail.com" className="btn-primary">
+                  <MagneticButton href={`mailto:${site.email}`} className="btn-primary">
                     <Mail size={15} />
                     Send Email
-                  </MagneticButton>
-                  <MagneticButton href="/resume.pdf" className="btn-ghost">
-                    <Download size={15} />
-                    Download CV
                   </MagneticButton>
                 </div>
               </div>
@@ -86,7 +83,7 @@ export function ContactSection() {
           <Reveal className="contact-form-wrap" delay={0.15} direction="right">
             <div className="contact-form-card">
               <h3 className="contact-form-card__title">Send a Message</h3>
-              <p className="contact-form-card__sub">I'll get back to you within 24 hours.</p>
+              <p className="contact-form-card__sub">We'll get back to you within 24 hours.</p>
 
               {submitted ? (
                 <motion.div
@@ -95,8 +92,8 @@ export function ContactSection() {
                   animate={{ opacity: 1, scale: 1 }}
                 >
                   <CheckCircle size={40} className="form-success__icon" />
-                  <h4>Message sent!</h4>
-                  <p>Thanks for reaching out. I'll respond within 24 hours.</p>
+                  <h4>Almost there!</h4>
+                  <p>Thanks for reaching out. Your email app opened with the details — we'll reply within 24 hours.</p>
                 </motion.div>
               ) : (
                 <form className="contact-form mt-6" onSubmit={handleSubmit}>

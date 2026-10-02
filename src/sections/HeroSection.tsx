@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback, type ReactNode } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
-import { trustedBrands, socialLinks } from "@/data";
+import { ArrowRight, Mail } from "lucide-react";
+import { heroTechStack, site } from "@/data";
 
 // ─── Aurora orb ──────────────────────────────────────────────────────────────
 function Orb({
@@ -95,10 +95,6 @@ export function HeroSection() {
     });
   }, []);
 
-  const socialIconMap: Record<string, React.ElementType> = {
-    github: Github, linkedin: Linkedin, twitter: Twitter,
-  };
-
   return (
     <section
       id="home"
@@ -142,21 +138,21 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="hero2-badge-dot" />
-            Available for new projects
+            Now booking projects · Remote worldwide
           </motion.div>
 
           {/* Headline */}
           <h1 className="hero2-headline">
             <span className="hero2-line">
-              <WordReveal text="Senior Full Stack" delay={0.25} />
+              <WordReveal text="We build" delay={0.25} />
             </span>
             <span className="hero2-line">
-              <WordReveal text="Engineer &" delay={0.38} gradient />
+              <WordReveal text="AI-powered" delay={0.38} gradient />
               {" "}
-              <WordReveal text="Product" delay={0.52} />
+              <WordReveal text="products" delay={0.52} />
             </span>
             <span className="hero2-line">
-              <WordReveal text="Builder." delay={0.64} />
+              <WordReveal text="that ship." delay={0.64} />
             </span>
           </h1>
 
@@ -167,8 +163,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
           >
-            Building scalable digital products that ship fast, scale effortlessly,
-            and create meaningful impact for millions of users worldwide.
+            MindForgeAi is a remote team of four senior engineers (5+ years each) delivering web development, Figma design, deployment, AI implementation, agentic AI and custom AI agents.
           </motion.p>
 
           {/* CTAs */}
@@ -178,15 +173,15 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
           >
-            <MagCTA href="#projects" primary>
-              View My Work <ArrowRight size={15} />
+            <MagCTA href="#services" primary>
+              Explore Services <ArrowRight size={15} />
             </MagCTA>
             <MagCTA href="#contact">
-              Let's Connect
+              Start a Project
             </MagCTA>
           </motion.div>
 
-          {/* Divider + Trusted by */}
+          {/* Tech strip */}
           <motion.div
             className="hero2-trusted"
             initial={{ opacity: 0 }}
@@ -195,42 +190,25 @@ export function HeroSection() {
           >
             <div className="hero2-trusted-rule" />
             <div className="hero2-trusted-row">
-              <span className="hero2-trusted-label">Trusted by</span>
-              {trustedBrands.map((b) => (
-                <span key={b.name} className="hero2-brand">{b.name}</span>
+              <span className="hero2-trusted-label">Our stack</span>
+              {heroTechStack.slice(0, 8).map((t) => (
+                <span key={t} className="hero2-brand">{t}</span>
               ))}
             </div>
           </motion.div>
         </div>
 
-        {/* Social links (vertical right) */}
-        <motion.div
-          className="hero2-socials"
-          initial={{ opacity: 0, x: 16 }}
-          animate={{ opacity: 1, x: 0 }}
+        <motion.a
+          href={`mailto:${site.email}`}
+          className="hero2-social-link"
+          aria-label="Email MindForgeAi"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.4 }}
         >
-          {socialLinks.slice(0, 3).map((link) => {
-            const Icon = socialIconMap[link.icon] ?? Github;
-            return (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.label}
-                className="hero2-social-link"
-                whileHover={{ scale: 1.15, x: -3 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon size={16} />
-              </motion.a>
-            );
-          })}
-          <div className="hero2-social-line" />
-        </motion.div>
+          <Mail size={16} />
+        </motion.a>
       </div>
-
       {/* Scroll indicator */}
       <motion.div
         className="hero2-scroll-hint"
